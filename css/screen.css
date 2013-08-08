@@ -108,3 +108,22 @@ td a {
     float: left;
 }
 
+.t_overview, th, td {
+    border: 1px solid #bbb;
+}
+
+.overview td {
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+
+.overview th {
+    padding-bottom: 4px;
+}
+
+tr.even td {
+    background-color: #ccc;
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+

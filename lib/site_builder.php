@@ -75,15 +75,21 @@ NAVI;
         // Return: String, genauer eine HTML-Tabelle.
         public function makeOverviewTable($set) {
             $return = '';
+            $i = 1;
             
-            $return .= '<table>';
-            $return .= '<tr>';
+            $return .= '<table class="t_overview">';
+            $return .= '<tr class="overview">';
                 $return .= '<th>English</th><th>German</th><th>Category</th><th>Options</th>';
             $return .= '</tr>';
 
             foreach ($set as $row) {
-                $return .= '<tr>' . 
-                        '<td class="entry">' . $row['english'] . '</td>
+                if (($i++ % 2) == 0) {
+                    $return .= '<tr class="even">';
+                } else {
+                    $return .= '<tr class="overview">';
+                }
+                
+                $return .= '<td class="entry">' . $row['english'] . '</td>
                          <td class="entry">' . $row['german'] . '</td>
                          <td class="entry">' . $row['name'] . '</td>
                          <td>
@@ -101,7 +107,7 @@ NAVI;
                                     class="function_icon" alt="delete" />
                             </a>
                           </td>  
-                     </tr>';
+                     </tr></div>';
             }
 
             $return .= '</table>';

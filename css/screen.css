@@ -1,0 +1,110 @@
+* {
+    background-color: #ddd;
+    font-family: verdana;
+}
+
+.sec_headline {
+    font-size: 120%;
+}
+
+#wrapper {
+    width: 900px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 0px;
+}
+
+#welcome {
+    margin-left: 450px;
+    margin-top: 20px;
+    font-family: georgia;
+}
+
+#navi {
+    margin-top: 20px;
+    margin-bottom: 65px;
+}
+
+#navi a {
+    color: #eee;
+    font-family: georgia;
+    font-size: 100%;
+    text-align: center;
+    background-color: #aaa;
+}
+
+.navi_cell {
+    width: 200px;
+    float: left;
+    font-family: georgia;
+    font-size: 120%;
+    text-align: center;
+    color: #eee;
+    background-color: #aaa;
+}
+
+#footer {
+    font-family: georgia;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.input_row {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.input_label {
+    float: left;
+    width: 90px;
+}
+
+.entry {
+    width: 200px;
+}
+
+th {
+    text-align: left;
+}
+
+td a {
+    text-decoration: none;
+}
+
+.report_success {
+    font-family: georgia;
+    color: green;
+}
+
+.report_fail {
+    font-family: georgia;
+    font-weight: bold;
+    color: red;
+}
+
+.table_view {
+   margin-left: 0px; 
+}
+
+.table_view td {
+    padding-bottom: 15px;
+}
+
+.td_view_desc {
+    width: 120px;
+}
+
+.function_icon {
+    margin-left: 5px;
+    margin-right: 6px;
+}
+
+.first_item {
+    float: left;
+    margin-left: 650px;
+}
+
+.icon_item {
+    float: left;
+}
+

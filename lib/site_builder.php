@@ -47,26 +47,46 @@ HEADER;
         }
 
         // Creates a navigation-ribbon.
-        static function makeNavi() {
-            $navi = <<<NAVI
-                    <div id="navi">
-                        <div id="overview" class="navi_cell" >
-                            <a class="navi_a" href="overview.php">Words-overview</a>
-                        </div>
+        static function makeNavi($active='overview') {
+            $registers = 
+                array(
+                    array(
+                        "id" => "overview", 
+                        "file" => "overview.php", 
+                        "title" => "Words-overview"
+                    ), 
+                    array(
+                        "id" => "search", 
+                        "file" => "search.php", 
+                        "title" => "Search single words"
+                    ), 
+                    array(
+                        "id" => "add", 
+                        "file" => "add.php", 
+                        "title" =>" Add new word"
+                    ), 
+                    array(
+                        "id" => "log_out", 
+                        "file" => "overview.php?logout=1", 
+                        "title" => "Log out"
+                    )
+                );                                    
 
-                        <div id="search" class="navi_cell">
-                            <a class="navi_a" href="search.php">Search single words</a>
-                        </div>
-
-                        <div id="add" class="navi_cell">
-                            <a class="navi_a" href="add.php">Add new word</a>
-                        </div>
-
-                        <div id="log_out" class="navi_cell">
-                            <a class="navi_a" href="overview.php?logout=1">Log out</a>
-                        </div>
-                    </div>
-NAVI;
+            $navi = '<div id="navi">';
+  
+            foreach ($registers as $ct_item) {
+                $navi .=  '<div id="' . $ct_item["id"] . '" class="navi_cell" >
+                            <a href="' . $ct_item["file"];
+                            if ($ct_item["id"] == $active) {                         
+                                $navi .= '" id="active_page">';
+                            } else {                           
+                                $navi .= '">';  
+                            }
+                $navi .=     $ct_item["title"] . '</a></div>';
+            }
+            
+            $navi .= '</div>';
+            
             return $navi;
         }
         

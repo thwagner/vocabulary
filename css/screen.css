@@ -25,22 +25,19 @@
     margin-bottom: 65px;
 }
 
-#navi a {
-    color: #eee;
-    font-family: georgia;
-    font-size: 100%;
-    text-align: center;
-    background-color: #aaa;
-}
-
 .navi_cell {
     width: 200px;
     float: left;
     font-family: georgia;
-    font-size: 120%;
+    font-size: 100%;
     text-align: center;
     color: #eee;
     background-color: #aaa;
+}
+
+.navi_cell a {
+    background-color: #aaa;
+    color: #eee;
 }
 
 #footer {
@@ -125,5 +122,9 @@ tr.even td {
     background-color: #ccc;
     padding-top: 2px;
     padding-bottom: 4px;
+}
+
+#active_page {
+    color: #f4f882;
 }
 

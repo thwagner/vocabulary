@@ -6,7 +6,7 @@
     
     echo SiteBuilder::makeWrapper('Add a new word');
     echo '<script src="./js/overview.js"></script>';
-    echo SiteBuilder::makeNavi();
+    echo SiteBuilder::makeNavi('add');
  
     if (isset($_POST['save']) == TRUE) {
         $success_report = FALSE;

@@ -13,7 +13,7 @@
 
     echo SiteBuilder::makeWrapper('Words-Overview');
     echo '<script src="./js/overview.js"></script>';
-    echo SiteBuilder::makeNavi();
+    echo SiteBuilder::makeNavi('overview');
 
     echo $site_builder->makeOverviewTable($set);
 

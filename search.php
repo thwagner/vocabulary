@@ -6,7 +6,7 @@
     
     echo SiteBuilder::makeWrapper('Search for words');
     echo '<script src="./js/overview.js"></script>';
-    echo SiteBuilder::makeNavi();
+    echo SiteBuilder::makeNavi('search');
     
     if (isset($_GET['search_string']) == TRUE && 
             empty($_GET['search_string']) == FALSE) {

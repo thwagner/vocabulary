@@ -1,11 +1,11 @@
 <?php
-    define('HOST', 'mysql12.1blu.de'); 
-    define('USER', 's140986_1919031');
-    define('PWD', 'sksWMS#16');
+    define('HOST', 'localhost'); 
+    define('USER', 'root');
+    define('PWD', '');
     
-    define('DATABASE', 'db140986x1919031');
+    define('DATABASE', 'vocab');
     
-    define('APP_DIR', 'pro_vocab');
+    define('APP_DIR', 'pro_vocab_live');
     
     define('APP_TITLE', 'Vocabulary book');
     define('TIME_SPACE_DEVELOPMENT', '2013');

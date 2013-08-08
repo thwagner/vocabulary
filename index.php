@@ -3,8 +3,8 @@
 	session_start();
         
         require_once './config/constants.php';
-        require_once 'toolbox.php';
-        require_once 'site_builder.php';
+        require_once './lib/toolbox.php';
+        require_once './lib/site_builder.php';
         
         echo SiteBuilder::makeHeader();
         echo SiteBuilder::makeWrapper('User-Authentification');      
@@ -34,7 +34,7 @@
                                             $_SESSION['id'] = $user['id'];
                                             $_SESSION['user'] = $user['first_name'] . ' ' . 
                                                     $user['last_name'];
-                                            
+
                                             header('Location: http://' . $_SERVER['SERVER_NAME'] . '/' . 
                                                     APP_DIR . '/overview.php');
                                     } else {

@@ -3,8 +3,8 @@
     session_start();
         
     require_once './config/constants.php';
-    require_once 'toolbox.php';
-    require_once 'site_builder.php';
+    require_once './lib/toolbox.php';
+    require_once './lib/site_builder.php';
 
     echo SiteBuilder::makeHeader();
 

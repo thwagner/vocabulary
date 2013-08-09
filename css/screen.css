@@ -125,6 +125,18 @@ tr.even td {
 }
 
 #active_page {
-    color: #f4f882;
+    color: #ff0;
+}
+
+#navi a:focus {
+    color: #dd25a4;
+}
+    
+#navi a:hover {
+    color: #dd3682;
+}
+
+#navi a:active {
+    color: #0ff;
 }
 

@@ -9,7 +9,6 @@
     $toolbox = new Toolbox(HOST, DATABASE, USER, PWD);
     
     echo SiteBuilder::makeWrapper('Add a new word');
-    echo '<script src="./js/overview.js"></script>';
     echo SiteBuilder::makeNavi('add');
  
     if (isset($_POST['save']) == TRUE) {

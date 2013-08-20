@@ -9,7 +9,6 @@
     $toolbox = new Toolbox(HOST, DATABASE, USER, PWD);
     
     echo SiteBuilder::makeWrapper('Search for words');
-    echo '<script src="./js/overview.js"></script>';
     echo SiteBuilder::makeNavi('search');
     
     if (isset($_GET['search_string']) == TRUE && 

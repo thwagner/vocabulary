@@ -114,10 +114,25 @@ HEADER;
             $return = '';
             $i = 1;
             
-            $return .= '<table class="t_overview">';
-            $return .= '<tr class="overview">';
-                $return .= '<th>English</th><th>German</th><th>Category</th><th>Options</th>';
-            $return .= '</tr>';
+            $return .= '<table class="t_overview" id="overview_table">';
+            $return .= '<thead><tr>';
+                $return .= '<th class="overview" id="eng">
+                                <span title="Click table-header for changing order">English</span> 
+                                <img src="./images/down.png" class="th_img" />
+                                </th>
+                            <th class="overview" id="germ">
+                                <span title="Click table-header for changing order">German </span>
+                                <img src="" class="th_img" />
+                                </th>
+                            <th class="overview" id="cat">
+                                <span title="Click table-header for changing order">Category </span>
+                                <img src="" class="th_img" />
+                                </th>
+                            <th class="overview" id="opt">
+                                Options
+                                <img src="" class="th_img" />
+                                </th>';
+            $return .= '</tr></thead><tbody>';
 
             foreach ($set as $row) {
                 if (($i++ % 2) == 0) {
@@ -144,10 +159,10 @@ HEADER;
                                     class="function_icon" alt="delete" />
                             </a>
                           </td>  
-                     </tr></div>';
+                     </tr>';
             }
 
-            $return .= '</table>';
+            $return .= '</tbody></table>';
             
             return $return;
         }

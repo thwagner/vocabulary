@@ -13,7 +13,6 @@
     $toolbox = new Toolbox(HOST, DATABASE, USER, PWD);
     
     echo SiteBuilder::makeWrapper('View word in detail');
-    echo '<script src="./js/overview.js"></script>';
     echo SiteBuilder::makeNavi();     
     echo $site_builder->makeActionIcons('', 'edit', 'del', $_GET['id']);
  

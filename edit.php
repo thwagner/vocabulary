@@ -9,7 +9,6 @@
     $toolbox = new Toolbox(HOST, DATABASE, USER, PWD);
     
     echo SiteBuilder::makeWrapper('Editing');
-    echo '<script src="./js/overview.js"></script>';
     echo SiteBuilder::makeNavi();
     echo $site_builder->makeActionIcons('view', '', 'del', $_GET['id']);
     

@@ -7,7 +7,24 @@
         public function __construct() {
             $this->toolbox = 
                 new Toolbox(HOST, DATABASE, USER, PWD);
-        }        
+        }   
+        // Start output-buffering, starts a session, checks access right.
+        //  Destroys the current session, if the GET-Variable logout is set.
+        static function makeSession() {
+            ob_start();
+            session_start();
+
+            echo SiteBuilder::makeHeader();
+
+            if (Toolbox::checkAccessRight() == 0) {
+                die('Access denied!');
+            }
+
+            if (isset($_GET['logout'])) {
+                    session_destroy();
+                    header('Location: http://' . $_SERVER['SERVER_NAME'] . '/' . APP_DIR . '/index.php');
+            }
+        }
         
         // Creates a HTML-Header.
         static function makeHeader() {

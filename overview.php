@@ -1,6 +1,9 @@
 <?php
-    ob_start();
-    require_once 'header.php';             
+    require_once './config/constants.php';
+    require_once './lib/toolbox.php';
+    require_once './lib/site_builder.php';
+    
+    SiteBuilder::makeSession();             
 
     $toolbox = new Toolbox(HOST, DATABASE, USER, PWD);
     $site_builder = new SiteBuilder();

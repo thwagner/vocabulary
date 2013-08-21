@@ -1,9 +1,12 @@
 <?php
+    ob_start();
+    session_start();
+        
     require_once './config/constants.php';
     require_once './lib/toolbox.php';
     require_once './lib/site_builder.php';
     
-    SiteBuilder::makeSession();     
+    SiteBuilder::initPage();     
     
     if (isset($_GET['id']) == FALSE && empty($_GET['id']) == TRUE) {
         die('No id-parameter has been passed.');

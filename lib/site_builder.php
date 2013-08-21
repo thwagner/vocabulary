@@ -10,10 +10,7 @@
         }   
         // Start output-buffering, starts a session, checks access right.
         //  Destroys the current session, if the GET-Variable logout is set.
-        static function makeSession() {
-            ob_start();
-            session_start();
-
+        static function initPage() {     
             echo SiteBuilder::makeHeader();
 
             if (Toolbox::checkAccessRight() == 0) {
@@ -115,54 +112,53 @@ HEADER;
             $i = 1;
             
             $return .= '<table class="t_overview" id="overview_table">';
-            $return .= '<thead><tr>';
-                $return .= '<th class="overview" id="eng">
-                                <span title="Click table-header for changing order">English</span> 
-                                <img src="./images/down.png" class="th_img" />
+            $return .= '<thead>
+                            <tr>';
+                    $return .= '<th class="overview" id="eng">
+                                    <span title="Click table-header for changing order">English</span> 
+                                    <img src="./images/down.png" class="th_img" />
                                 </th>
-                            <th class="overview" id="germ">
-                                <span title="Click table-header for changing order">German </span>
-                                <img src="" class="th_img" />
+                                <th class="overview" id="germ">
+                                    <span title="Click table-header for changing order">German </span>
+                                    <img src="" class="th_img" />
                                 </th>
-                            <th class="overview" id="cat">
-                                <span title="Click table-header for changing order">Category </span>
-                                <img src="" class="th_img" />
+                                <th class="overview" id="cat">
+                                    <span title="Click table-header for changing order">Category </span>
+                                    <img src="" class="th_img" />
                                 </th>
-                            <th class="overview" id="opt">
-                                Options
-                                <img src="" class="th_img" />
+                                <th class="overview" id="opt">
+                                    Options
+                                    <img src="" class="th_img" />
                                 </th>';
-            $return .= '</tr></thead><tbody>';
+                $return .= '</tr>
+                    </thead>
+                    <tbody>';
 
-            foreach ($set as $row) {
-                if (($i++ % 2) == 0) {
-                    $return .= '<tr class="even">';
-                } else {
-                    $return .= '<tr class="overview">';
-                }
-                
-                $return .= '<td class="entry">' . $row['english'] . '</td>
-                         <td class="entry">' . $row['german'] . '</td>
-                         <td class="entry">' . $row['name'] . '</td>
-                         <td>
-                            <a href="view.php?id=' . $row['id'] . '">
-                                <img src="images/view.png" title="View word in detail." 
-                                    class="function_icon" alt="view" />
-                            </a>
-                            <a href="edit.php?id=' . $row['id'] . '">
-                                <img src="images/pencil.png" title="Edit this word." 
-                                    class="function_icon" alt="edit" />
-                            </a>
-                            <a href="delete.php?id=' . $row['id'] . '" id="del_word" 
-                                onclick="return askConfirmBeforeDelete();">
-                                <img src="images/delete.png" title="Delete this word." 
-                                    class="function_icon" alt="delete" />
-                            </a>
-                          </td>  
-                     </tr>';
+            foreach ($set as $row) {           
+                    $return .= '<tr>';
+                        $return .= '<td class="entry">' . $row['english'] . '</td>
+                                 <td class="entry">' . $row['german'] . '</td>
+                                 <td class="entry">' . $row['name'] . '</td>
+                                 <td>
+                                    <a href="view.php?id=' . $row['id'] . '">
+                                        <img src="images/view.png" title="View word in detail." 
+                                            class="function_icon" alt="view" />
+                                    </a>
+                                    <a href="edit.php?id=' . $row['id'] . '">
+                                        <img src="images/pencil.png" title="Edit this word." 
+                                            class="function_icon" alt="edit" />
+                                    </a>
+                                    <a href="delete.php?id=' . $row['id'] . '" id="del_word" 
+                                        onclick="return askConfirmBeforeDelete();">
+                                        <img src="images/delete.png" title="Delete this word." 
+                                            class="function_icon" alt="delete" />
+                                    </a>
+                                 </td>  
+                             </tr>';
             }
 
-            $return .= '</tbody></table>';
+            $return .= '</tbody>
+                </table>';
             
             return $return;
         }

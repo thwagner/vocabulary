@@ -12,7 +12,7 @@
             }
         } 
         
-         public function makeCategoryOptions($selected) {
+        public function makeCategoryOptions($selected) {
             $SELECT = 'SELECT `id`, `name`
                         FROM `categories`
                         ORDER BY `name`';

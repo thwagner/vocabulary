@@ -115,15 +115,14 @@ HEADER;
             $return .= '<thead>
                             <tr>';
                     $return .= '<th class="overview" id="eng">
-                                    <span title="Click table-header for changing order">English</span> 
-                                    <img src="./images/down.png" class="th_img" />
+                                    <span title="Click table-header for changing the order">English</span> 
                                 </th>
                                 <th class="overview" id="germ">
-                                    <span title="Click table-header for changing order">German </span>
+                                    <span title="Click table-header for changing the order">German </span>
                                     <img src="" class="th_img" />
                                 </th>
                                 <th class="overview" id="cat">
-                                    <span title="Click table-header for changing order">Category </span>
+                                    <span title="Click table-header for changing the order">Category </span>
                                     <img src="" class="th_img" />
                                 </th>
                                 <th class="overview" id="opt">

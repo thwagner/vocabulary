@@ -114,8 +114,10 @@ td a {
     padding-bottom: 4px;
 }
 
-.overview th {
+#overview_table th {
     padding-bottom: 4px;
+    background-repeat: no-repeat; 
+    background-position: right;
 }
 
 tr.even td {
@@ -140,4 +142,11 @@ tr.even td {
     color: #0ff;
 }
 
+th.headerSortUp { 
+    background-image: url(../images/down.png);
+} 
+
+th.headerSortDown { 
+    background-image: url(../images/up.png); 
+} 
 

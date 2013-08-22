@@ -42,36 +42,8 @@
                             ORDER BY `english`';
         $_SESSION['select'] = $SELECT;
         $set = $toolbox->getSetOfRecords($SELECT);
-                
-        echo '<table style="margin-top: 15px;">';
-            echo '<tr>';
-                echo '<th>English</th><th>German</th><th>Category</th><th>Options</th>';
-            echo '</tr>';
-
-            foreach ($set as $row) {
-                echo '<tr>' . 
-                        '<td class="entry">' . $row['english'] . '</td>
-                         <td class="entry">' . $row['german'] . '</td>
-                         <td class="entry">' . $row['name'] . '</td>
-                         <td>
-                            <a href="view.php?id=' . $row['id'] . '">
-                                <img src="images/view.png" title="View word in detail." 
-                                    class="function_icon" alt="view" />
-                            </a>
-                            <a href="edit.php?id=' . $row['id'] . '">
-                                <img src="images/pencil.png" title="Edit this word." 
-                                    class="function_icon" alt="edit" />
-                            </a>
-                            <a href="delete.php?id=' . $row['id'] . '" id="del_word" 
-                                onclick="return askConfirmBeforeDelete();">
-                                <img src="images/delete.png" title="Delete this word." 
-                                    class="function_icon" alt="delete" />
-                            </a>
-                          </td>  
-                     </tr>';
-            }
-
-        echo '</table>';
+        
+        echo $site_builder->makeOverviewTable($set);
     }
     
     echo SiteBuilder::makeFooter();

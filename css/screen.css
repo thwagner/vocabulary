@@ -150,3 +150,12 @@ th.headerSortDown {
     background-image: url(../images/up.png); 
 } 
 
+.search_opt {
+    margin-bottom: 14px;
+}
+
+.search_value {
+    margin-right: 4px;
+    margin-left: 16px;
+}
+

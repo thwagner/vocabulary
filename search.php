@@ -38,7 +38,13 @@
         } else {
             echo '&nbsp;<a class="search_value" href="' . $_SERVER['PHP_SELF'] . '">
                     Reset search form
-                </a></div>';
+                    </a>
+                    <a href="./print.php?sql=' . $_SESSION['select'] . '"
+                        style="margin-left:330px;" >
+                        <img src="./images/printer.png" alt="printer_img" 
+                         title="Click to get a print-optimized layout of this table!" />
+                    </a>              
+                </div>';
         }        
         echo '<div class="search_opt">
                 <input type="radio" name="language" value="english" '; 
@@ -104,7 +110,7 @@
         }
         
         // ENDE - Kriterien-String
-        $SELECT = 'SELECT `words`.`id`, `english`, `german`, `name` 
+        $SELECT = 'SELECT `words`.`id`, `english`, `german`, `name`, `note`, `example` 
                             FROM `words` JOIN `categories`
                             ON `words`.`cat_id` = `categories`.`id`'; 
         if ($crits != '') {

@@ -52,19 +52,19 @@
         //  Value des Attribut "name" mit eckigen Klammern endet.
         echo '<div class="search_opt">
               <input type="checkbox" name="category[]" value="2" 
-                class="search_value cat_box" ';
+                class="search_value cat_box" id="business" ';
                 setCheckbox(2);
         echo ' />Business';
         echo '<input type="checkbox" name="category[]" value="4" 
-                class="search_value cat_box" ';
+                class="search_value cat_box" id="general" ';
                 setCheckbox(4);
         echo '/>General';
         echo '<input type="checkbox" name="category[]" value="3" 
-                class="search_value cat_box" ';
+                class="search_value cat_box" id="informal" ';
                 setCheckbox(3);
         echo ' />Informal';
         echo '<input type="checkbox" name="category[]" value="1" 
-                class="search_value cat_box" ';
+                class="search_value cat_box" id="technology" ';
                 setCheckbox(1);
         echo ' />Technology'; 
         echo '</div>';       

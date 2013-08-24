@@ -1,29 +1,42 @@
 window.onload = init;
 
 function init() {
-    var boxes = document.getElementsByClassName('cat_box');
-  
-    for (i = 0; i < boxes.length; i++) {
-        boxes[i].onchange = checkCatBoxes;
-    }
+   var business = getId('business');
+   business.onchange = function() {
+        checkCatBoxes(business);
+   }
+   
+   var general = getId('general');
+   general.onchange = function() {
+        checkCatBoxes(general);
+   }
+   
+   var informal = getId('informal');
+   informal.onchange = function() {
+        checkCatBoxes(informal);
+   }
+   
+   var technology = getId('technology');
+   technology.onchange = function() {
+        checkCatBoxes(technology);
+   }
 }
 
-function checkCatBoxes() {
-    var boxes = document.getElementsByClassName('cat_box');
-    var constrain = false;
-    
-    for (i = 0; i < boxes.length; i++) {
-        alert(document.getElementsByClassName('cat_box')[i].getAttribute('checked'));
-        if (document.getElementsByClassName('cat_box')[i].getAttribute('checked') == 'checked') {
-            constrain = true;
-        }
-    }
-    
-    if (constrain == false) {
-        alert('false');
-    } else {
-        alert('true');
-    }
+function checkCatBoxes(id) {
+   var boxes = document.getElementsByClassName('cat_box');
+   var ok = false;
+   
+   for (var i = 0; i < boxes.length; i++) {
+       if (boxes[i].checked == true) {
+           ok = true
+       }      
+   } 
+   
+   if (ok == false) {
+       id.checked = true;
+       id.focus();
+       alert('At least one category-box must be checked.');
+   }
 }
 
 

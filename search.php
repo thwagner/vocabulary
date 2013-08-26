@@ -35,15 +35,10 @@
             echo '<input type="submit" name="start" id="start" value="Start search" 
                     class="search_value" />
                 </div>';           
-        } else {
+        } else {          
             echo '&nbsp;<a class="search_value" href="' . $_SERVER['PHP_SELF'] . '">
                     Reset search form
-                    </a>
-                    <a href="./print.php?sql=' . $_SESSION['select'] . '"
-                        style="margin-left:330px;" >
-                        <img src="./images/printer.png" alt="printer_img" 
-                         title="Click to get a print-optimized layout of this table!" />
-                    </a>              
+                    </a>                               
                 </div>';
         }        
         echo '<div class="search_opt">
@@ -118,6 +113,11 @@
         }       
      
         $_SESSION['select'] = $SELECT;
+        echo '<a href="./print.php"
+                style="margin-left: 690px; position:absolute; bottom: 340px;">
+                <img src="./images/printer.png" alt="printer_img" 
+                 title="Click to get a print-optimized layout of this table!" />
+             </a>';  
         $set = $toolbox->getSetOfRecords($SELECT);
         
         echo $site_builder->makeOverviewTable($set);

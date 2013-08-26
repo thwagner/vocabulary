@@ -57,6 +57,7 @@ and open the template in the editor.
             // END - main
             echo '</div>';
             
+            $toolbox->destroyPdo();
             ob_flush();
         ?>
     </body>

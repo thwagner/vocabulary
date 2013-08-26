@@ -75,6 +75,10 @@
             }
         }
         
+        public function destroyPdo() {
+            $this->pdo = null;
+        }
+        
         static function sanitizeString($string) { 
             // 1. Entferne Leerzeichen am Anfang und am Ende.
             $return = trim($string);

@@ -22,6 +22,7 @@
 
     echo $site_builder->makeOverviewTable($set);
     echo SiteBuilder::makeFooter();
-
+    
+    $toolbox->destroyPdo();
     ob_flush();
 ?>

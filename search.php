@@ -125,6 +125,7 @@
     
     echo SiteBuilder::makeFooter();
     
+    $toolbox->destroyPdo();
     ob_flush();
     
     function setRadiobutton($language, $else='') {

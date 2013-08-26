@@ -50,5 +50,6 @@
     echo $site_builder->makeEditForm($_GET['id']);    
     echo SiteBuilder::makeFooter();
     
+    $toolbox->destroyPdo();
     ob_flush();
 ?>

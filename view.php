@@ -38,5 +38,6 @@
     
     echo SiteBuilder::makeFooter();
     
+    $toolbox->destroyPdo();
     ob_flush();
 ?>

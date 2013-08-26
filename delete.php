@@ -22,5 +22,6 @@
     
     echo '</body></html>';
     
+    $toolbox->destroyPdo();
     ob_flush();
 ?>

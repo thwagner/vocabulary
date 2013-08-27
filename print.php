@@ -1,7 +1,6 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,8 +10,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-            ob_start();
-            session_start();
+            ob_start();            
 
             require_once './config/constants.php';
             require_once './lib/toolbox.php';
@@ -29,16 +27,16 @@ and open the template in the editor.
             $set = $toolbox->getSetOfRecords($sql);
             // START - main
             echo '<div id="main">';
-                echo '<p><strong><span class="description">Creation date &amp; time: </span></strong><i>' . 
+                echo '<p><span class="description">Creation date &amp; time: </span><i>' . 
                         date('d.m.Y, H:i') . '</i></p>';
                 echo '<table class="print_table" border="0">';
                     echo '<tr class="tr_head">';
-                        echo '<th></td>
-                                <td>English</td>
-                                <td>German</td>
-                                <td>Category</td>
-                                <td>Example</td>
-                                <td>Note</td>';
+                        echo '<td></td>
+                                <td class="content">English</td>
+                                <td class="content">German</td>
+                                <td class="content">Category</td>
+                                <td class="content">Example</td>
+                                <td class="content">Note</td>';
                     echo '</tr>';
 
                     while ($row = $set->fetch(PDO::FETCH_ASSOC)) {

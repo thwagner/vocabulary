@@ -8,9 +8,10 @@
 }
 
 #wrapper {
-    width: 900px;
-    margin-left: 60px;
-    margin-right: 60px;
+    width: 1020px;
+    margin: 0 auto;
+/*    margin-left: 60px;
+    margin-right: 60px;*/
     margin-top: 0px;
 }
 

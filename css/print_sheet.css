@@ -6,9 +6,9 @@
     font-size: 12px;
 }
 
-td .content {
-    width: 3.2cm;
-    padding: 0.1cm 0.4cm 0.4cm 0.1cm;
+.content {
+    width: 3.5cm;
+    margin-right: 0.25cm;
 }
 
 .tr_head {

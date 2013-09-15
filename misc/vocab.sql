@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 5.5.27, for Win32 (x86)
 --
--- Host: mysql12.1blu.de    Database: db140986x1919031
+-- Host: localhost    Database: vocab
 -- ------------------------------------------------------
--- Server version	5.5.32-0ubuntu0.12.04.1
+-- Server version	5.5.27
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -85,7 +85,7 @@ CREATE TABLE `words` (
   PRIMARY KEY (`id`),
   KEY `cat_id` (`cat_id`),
   CONSTRAINT `words_ibfk_1` FOREIGN KEY (`cat_id`) REFERENCES `categories` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=137 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=144 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,7 +94,7 @@ CREATE TABLE `words` (
 
 LOCK TABLES `words` WRITE;
 /*!40000 ALTER TABLE `words` DISABLE KEYS */;
-INSERT INTO `words` VALUES (13,'trait','Eigenschaft, Charakterzug, Wesenszug',4,'',''),(25,'to withdraw','etw. abheben',2,'Gegenteil: to deposit == etw. einzahlen','... to withdraw from the contract.'),(28,'wire','Draht, Kabel',1,NULL,NULL),(48,'to schedule','terminieren',2,'',''),(49,'to spill','ueberlaufen',4,'',''),(54,'walkthrough','Komplettloesung, Ortsbesichtigung',1,'',''),(55,'to revert to sth.','auf etw. zurueckgreifen, zu etw. zurueckkehren',4,'',''),(75,'supernatural','uebernatuerlich',4,'',''),(100,'turn','Wende',4,'',''),(110,'amendment','Besserung',4,'',''),(111,'conscientious','gewissenhaft',4,'',''),(112,'loan','Darlehen',2,'',''),(113,'interest rate','Zinsfuss',2,'',''),(114,'pedestal ','Absatz, Sockel',1,'','to be put on a pedestal == auf ein Podest gestellt werden'),(122,'to accustom','eingewoehnen',4,'',''),(123,'to adapt','anpassen',4,'',''),(124,'mistake','Menschliches Versagen, Fehlgriff, -verhalten',4,'',''),(125,'petulant','launisch, gereizt',4,'',''),(126,'livestock','lebender Bestand, Viehbestand',4,'',''),(127,'entangled','verwickelt',4,'','to become entangled'),(128,'prolific','fruchtbar',4,'',''),(129,'eligibility','der Anspruch, die Berechtigung',2,'',''),(130,'investigator','der Ermittler, der Fahnder',4,'',''),(131,'subsequently','im Anschluss, darauffolgend',4,'',''),(132,'prowess','Faehigkeit',4,'',''),(133,'inception','Anbeginn, Gruendung',4,'','Since it`s inception it has ...'),(134,'grumbling','Murren, Noergelei',4,'',''),(135,'to revamp','auf-, ausbessern',4,'','How the foundation can revamp itself in the coming years.'),(136,'creditworthiness','Kreditwuerdigkeit, Bonitaet',2,'','Social connections can be a indicator of a person`s creditworthiness.');
+INSERT INTO `words` VALUES (13,'trait','Eigenschaft, Charakterzug, Wesenszug',4,'',''),(25,'to withdraw','etw. abheben',2,'Gegenteil: to deposit == etw. einzahlen','... to withdraw from the contract.'),(28,'wire','Draht, Kabel',1,NULL,NULL),(48,'to schedule','terminieren',2,'',''),(49,'to spill','ueberlaufen',4,'',''),(54,'walkthrough','Komplettloesung, Ortsbesichtigung',1,'',''),(55,'to revert to sth.','auf etw. zurueckgreifen, zu etw. zurueckkehren',4,'',''),(75,'supernatural','uebernatuerlich',4,'',''),(100,'turn','Wende',4,'',''),(110,'amendment','Besserung',4,'',''),(111,'conscientious','gewissenhaft',4,'',''),(112,'loan','Darlehen',2,'',''),(113,'interest rate','Zinsfuss',2,'',''),(114,'pedestal ','Absatz, Sockel',1,'','to be put on a pedestal == auf ein Podest gestellt werden'),(122,'to accustom','eingewoehnen',4,'',''),(123,'to adapt','anpassen',4,'',''),(124,'mistake','Menschliches Versagen, Fehlgriff, -verhalten',4,'',''),(125,'petulant','launisch, gereizt',4,'',''),(126,'livestock','lebender Bestand, Viehbestand',4,'',''),(127,'entangled','verwickelt',4,'','to become entangled'),(128,'prolific','fruchtbar',4,'',''),(129,'eligibility','der Anspruch, die Berechtigung',2,'',''),(130,'investigator','der Ermittler, der Fahnder',4,'',''),(131,'subsequently','im Anschluss, darauffolgend',4,'',''),(132,'prowess','Faehigkeit',4,'',''),(133,'inception','Anbeginn, Gruendung',4,'','Since it`s inception it has ...'),(134,'grumbling','Murren, Noergelei',4,'',''),(135,'to revamp','auf-, ausbessern',4,'','How the foundation can revamp itself in the coming years.'),(136,'creditworthiness','Kreditwuerdigkeit, Bonitaet',2,'','Social connections can be a indicator of a person`s creditworthiness.'),(137,'susceptible','anfaellig, stoerempfindlich',4,'','It is susceptible to a brute force attack.'),(138,'to throw a spanner in sth.','jmdm. einen Strich durch die Rechnung machen',4,'',''),(139,'gregarious','gesellig',4,'',''),(140,'succinct','buendig, knapp',4,'',''),(141,'to lure','anlocken, koedern',4,'',''),(142,'appendix','Anhang, Anlagen',4,'','Could you move it to an appendix?'),(143,'resonsive','ansprechbar, reaktionsfaehig',1,'','');
 /*!40000 ALTER TABLE `words` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -107,4 +107,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-08-27 10:24:54
+-- Dump completed on 2013-09-15 10:08:34

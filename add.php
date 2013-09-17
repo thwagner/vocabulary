@@ -41,7 +41,9 @@
         }
         
         if ($success_report == TRUE) {
-            echo '<div id="report" class="report_success">Word has been added.</div>';
+            echo '<div id="report" class="report_success">The Word "' . 
+                htmlentities($_POST['english']) . 
+                '" has been added.</div>';
         }
     }
     

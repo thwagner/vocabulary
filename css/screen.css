@@ -159,4 +159,13 @@ th.headerSortDown {
     margin-right: 4px;
     margin-left: 16px;
 }
+/* Regel fuer das Input-control "text" im formular add.php, bzw. 
+    site_builder.php/makeEditForm(). */
+.text_for_word {
+    width: 42%;
+}
 
+textarea {
+    font-weight: normal;
+    font-size: 14px;
+}

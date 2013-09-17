@@ -270,12 +270,12 @@ HEADER;
                     $form .= '<div class="input_row">
                                 <div class="input_label">English: </div>
                                 <input type="text" name="english" id="english" value="' . 
-                                    $word['english'] . '" size="50" />
+                                $word['english'] . '" class="text_for_word" />
                              </div>';
                     $form .= '<div class="input_row">
                                 <div class="input_label">German: </div>
                                 <input type="text" name="german" id="german" value="' .
-                                    $word['german'] . '" size="50" />
+                                $word['german'] . '" class="text_for_word" />
                             </div>';
                     $form .= '<div class="input_row">                         
                                 <div class="input_label">Category: </div>

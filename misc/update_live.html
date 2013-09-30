@@ -1,0 +1,22 @@
+<!--
+    Ruft das PHP-Skript (update_live.php) auf, welches das Live-System mit den 
+    lokalen Daten ueberschreibt.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update Live-System</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src='../js/update_live.js'>           
+            </script>
+    </head>
+    <body>
+        <h1>Update live-system</h1>
+        <p>Update the live-system with the content of the local database.<br />
+        Click the button to execute the update.</p>
+        <form method="post" action="./update_live.php" id="form_update">
+            <input type="submit" id="submit_update" name="submit_update"
+                   value="execute update" />
+        </form>
+    </body>
+</html>

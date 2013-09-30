@@ -1,0 +1,17 @@
+# Die RewriteBase ist das Directory in dem sich der .htaccess-file befindet. 
+#  Wenn .htaccess also den Path 'localhost/project/.htaccess' hat, dann ist 
+#  'localhost/project/' die RewriteBase.
+# ---------------------------------------------------------------------------
+# mod_rewrite ein- und ausschalten!
+RewriteEngine on
+
+# Bedingung für eine Umleitung definieren!
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+
+# Umleitungen festlegen!
+RewriteRule .*update.* misc/update_live.html [NC]
+# Die Variable $1 zeigt auf den Inhalt von (.*). Alles was in Klammern steht 
+#  wird als Variable gespeichert und kann ueber Referenzen, wie $1, abgefragt 
+#  werden. 
+RewriteRule ^(.*)$ index.php
